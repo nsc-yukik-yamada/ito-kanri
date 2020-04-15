@@ -1,0 +1,35 @@
+糸管理システム
+
+・システムで出来ること
+index画面上の入力フォームから入力した糸のデータをテーブルとして表示する。
+その際、今までに表示されているデータの末尾に新しいデータを追加する。
+表示する内容：色・メーカー・品番
+
+・システムの構成
+ITO-KANRI
+    - index.html ...入力、表示する画面 
+    - css
+        - reset.css
+        - style.css
+    - js
+        - controllers
+            -ItoController.js ...データの流れをコントロールする。
+        - models
+            - Ito.js ... 画面から
+            - ItoList.js
+        - view
+            - ItoListView.js
+
+・画面で入力する項目
+    ・内容      ・形式      ・ID名
+    色          16進数      color
+    メーカー    文字列      brand          
+    品番        数字        hinban
+
+
+・クラス図
+ItoController ... 画面に入力されたデータを受け取るクラス
+    変数
+    _inputColor : 色を格納する
+    _inputBrand : メーカー名を格納する
+    _inputHinban: 品番を格納する

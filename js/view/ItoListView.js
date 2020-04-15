@@ -11,8 +11,18 @@ class ItoListView {
         </tr>`;
   }
 
+  // htmlを更新する
+  update(ito) {
+
+    this._element.innerHTML = this._template(ito);
+  }
+
+// テーブル追加
   _templateDocument(ito) {
+    // trタグを作成
     let tr = document.createElement("tr");
+
+    // tdタグに各要素を格納
     let tdColor = document.createElement("td");
     tdColor.textContent = ito.color;
 
@@ -22,15 +32,25 @@ class ItoListView {
     let tdHinban = document.createElement("td");
     tdHinban.textContent = ito.hinban;
 
+    // trタグの内部にtdタグを格納
     tr.appendChild(tdColor);
     tr.appendChild(tdBrand);
     tr.appendChild(tdHinban);
   
+    // 今までのテーブルに新規登録分を追加
     this._element.appendChild(tr);
   }
 
-  update(ito) {
 
-    this._element.innerHTML = this._template(ito);
+  // 糸テーブルのクリア
+  clear(){
+    this._element.innerHTML = " ";
+
+  }
+
+  // 画面から選択したものを削除する
+  deleteItem(){
+    
+
   }
 }

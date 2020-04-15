@@ -104,12 +104,12 @@ button{
     padding: .5em 2em;
     border: 0;
     border-bottom: 3px solid;
-    font-size: 1.2em;
+    font-size: 14px;
     cursor: pointer;
     margin: 0;
     margin-top: -3px;
     color: #fff;
-    background-color:#0c8cd3;
+    background-color:#08a9ff;
     border-color: #04324c;
     width: 20%;
     display: block;
@@ -127,6 +127,10 @@ button[disabled=disabled], button:disabled {
     background-color: gray;
     border-color: darkgray;
  
+}
+
+#clear-ito{
+    align-content: right;
 }
  
 .adicionar-paciente{
